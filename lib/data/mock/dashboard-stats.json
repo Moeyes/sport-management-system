@@ -1,0 +1,4 @@
+{
+  "_deprecated": true,
+  "message": "This file is deprecated — stats are now computed from other mock data (events, athletes, medals, etc.). You can safely delete this file if not needed."
+}

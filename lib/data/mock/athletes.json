@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "firstName": "SAT",
+    "lastName": "PANHA",
+    "eventId": "evt-1",
+    "dateOfBirth": "2005-08-17",
+    "gender": "male",
+    "province": "Phnom Penh",
+    "sports": [
+      "Boxing"
+    ],
+    "email": "satpanha618@gmail.com",
+    "phone": "+855964461381",
+    "registrationDate": "2025-12-10",
+    "registeredAt": "2025-12-10T00:00:00.000Z",
+    "status": "approved",
+    "medals": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "photoUrl": "blob:http://localhost:3000/5dc5efcc-b1ec-47ce-82c5-35e95321d2a4"
+  },
+  {
+    "id": "2",
+    "firstName": "Choun ",
+    "lastName": "Rathanak",
+    "eventId": "evt-2",
+    "dateOfBirth": "2004-12-19",
+    "gender": "male",
+    "province": "Siem Reap",
+    "sports": [
+      "Badminton"
+    ],
+    "email": "rathanak.choun@cpf.com",
+    "phone": "+85569882161",
+    "registrationDate": "2025-12-10",
+    "registeredAt": "2025-12-10T00:00:00.000Z",
+    "status": "approved",
+    "medals": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "photoUrl": "blob:http://localhost:3000/cabcaac9-02a0-4bc6-b255-6f7987ad35b2"
+  },
+  {
+    "id": "3",
+    "firstName": "PHOK",
+    "lastName": "KEOMONNYRATANAK",
+    "eventId": "1",
+    "dateOfBirth": "2025-09-19",
+    "gender": "Male",
+    "province": "Department C",
+    "sports": [
+      "Athletics"
+    ],
+    "email": "sport@sport.com",
+    "phone": "99886756",
+    "registrationDate": "2026-01-02",
+    "registeredAt": "2026-01-02T07:27:35.027Z",
+    "status": "pending",
+    "medals": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "photoUrl": "/avatars/default.jpg"
+  }
+  
+]

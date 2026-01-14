@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5",
+    "athleteName": "Virak Hem",
+    "sport": "Boxing",
+    "province": "Kampong Cham",
+    "registrationDate": "2025-01-08",
+    "status": "pending"
+  },
+  {
+    "id": "4",
+    "athleteName": "Channary Lim",
+    "sport": "Badminton",
+    "province": "Kandal",
+    "registrationDate": "2025-01-07",
+    "status": "pending"
+  },
+  {
+    "id": "7",
+    "athleteName": "Dara Kong",
+    "sport": "Football",
+    "province": "Siem Reap",
+    "registrationDate": "2025-01-06",
+    "status": "approved"
+  },
+  {
+    "id": "1",
+    "athleteName": "Sopheap Chan",
+    "sport": "Football",
+    "province": "Phnom Penh",
+    "registrationDate": "2025-01-05",
+    "status": "approved"
+  },
+  {
+    "id": "2",
+    "athleteName": "Sreymom Pich",
+    "sport": "Swimming",
+    "province": "Siem Reap",
+    "registrationDate": "2025-01-04",
+    "status": "approved"
+  }
+]

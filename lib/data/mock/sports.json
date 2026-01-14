@@ -1,0 +1,93 @@
+[
+  {
+    "id": "2",
+    "name": "Basketball",
+    "category": "Team Sports",
+    "description": "5v5 indoor basketball",
+    "maxParticipants": 12,
+    "currentParticipants": 144,
+    "startDate": "2025-01-20",
+    "endDate": "2025-01-28",
+    "venue": "Sports Complex A",
+    "status": "completed",
+    "icon": "basketball"
+  },
+  {
+    "id": "3",
+    "name": "Swimming",
+    "category": "Aquatics",
+    "description": "Olympic-style swimming events",
+    "maxParticipants": 8,
+    "currentParticipants": 96,
+    "startDate": "2025-01-10",
+    "endDate": "2025-01-18",
+    "venue": "Aquatic Center",
+    "status": "ongoing",
+    "icon": "swimming"
+  },
+  {
+    "id": "4",
+    "name": "Athletics",
+    "category": "Track & Field",
+    "description": "100m, 200m, relay events",
+    "maxParticipants": 16,
+    "currentParticipants": 128,
+    "startDate": "2025-01-12",
+    "endDate": "2025-01-22",
+    "venue": "Olympic Stadium",
+    "status": "ongoing",
+    "icon": "athletics"
+  },
+  {
+    "id": "5",
+    "name": "Volleyball",
+    "category": "Team Sports",
+    "description": "6v6 indoor volleyball",
+    "maxParticipants": 12,
+    "currentParticipants": 108,
+    "startDate": "2025-01-25",
+    "endDate": "2025-02-02",
+    "venue": "Sports Hall B",
+    "status": "upcoming",
+    "icon": "volleyball"
+  },
+  {
+    "id": "6",
+    "name": "Badminton",
+    "category": "Racquet Sports",
+    "description": "Singles and doubles events",
+    "maxParticipants": 4,
+    "currentParticipants": 64,
+    "startDate": "2025-01-08",
+    "endDate": "2025-01-15",
+    "venue": "Indoor Arena",
+    "status": "completed",
+    "icon": "badminton"
+  },
+  {
+    "id": "7",
+    "name": "Table Tennis",
+    "category": "Racquet Sports",
+    "description": "Singles, doubles, and team events",
+    "maxParticipants": 4,
+    "currentParticipants": 72,
+    "startDate": "2025-01-18",
+    "endDate": "2025-01-24",
+    "venue": "Convention Center",
+    "status": "upcoming",
+    "icon": "table-tennis"
+  },
+  {
+    "id": "8",
+    "name": "Boxing",
+    "category": "Combat Sports",
+    "description": "Multiple weight categories",
+    "maxParticipants": 2,
+    "currentParticipants": 48,
+    "startDate": "2025-01-22",
+    "endDate": "2025-01-30",
+    "venue": "Fight Arena",
+    "status": "upcoming",
+    "icon": "boxing"
+  }
+]

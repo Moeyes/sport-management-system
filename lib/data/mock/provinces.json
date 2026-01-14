@@ -1,0 +1,327 @@
+[
+  {
+    "id": "1",
+    "name": "Phnom Penh",
+    "khmerName": "ភ្នំពេញ",
+    "athleteCount": 156,
+    "medals": {
+      "gold": 42,
+      "silver": 38,
+      "bronze": 32,
+      "total": 112
+    },
+    "rank": 1
+  },
+  {
+    "id": "2",
+    "name": "Kandal",
+    "khmerName": "កណ្តាល",
+    "athleteCount": 98,
+    "medals": {
+      "gold": 28,
+      "silver": 24,
+      "bronze": 20,
+      "total": 72
+    },
+    "rank": 2
+  },
+  {
+    "id": "3",
+    "name": "Siem Reap",
+    "khmerName": "សៀមរាប",
+    "athleteCount": 86,
+    "medals": {
+      "gold": 24,
+      "silver": 22,
+      "bronze": 18,
+      "total": 64
+    },
+    "rank": 3
+  },
+  {
+    "id": "4",
+    "name": "Battambang",
+    "khmerName": "បាត់ដំបង",
+    "athleteCount": 76,
+    "medals": {
+      "gold": 20,
+      "silver": 18,
+      "bronze": 16,
+      "total": 54
+    },
+    "rank": 4
+  },
+  {
+    "id": "5",
+    "name": "Kampong Cham",
+    "khmerName": "កំពង់ចាម",
+    "athleteCount": 68,
+    "medals": {
+      "gold": 16,
+      "silver": 14,
+      "bronze": 12,
+      "total": 42
+    },
+    "rank": 5
+  },
+  {
+    "id": "6",
+    "name": "Kampong Speu",
+    "khmerName": "កំពង់ស្ពឺ",
+    "athleteCount": 54,
+    "medals": {
+      "gold": 12,
+      "silver": 11,
+      "bronze": 10,
+      "total": 33
+    },
+    "rank": 6
+  },
+  {
+    "id": "7",
+    "name": "Prey Veng",
+    "khmerName": "ព្រៃវែង",
+    "athleteCount": 52,
+    "medals": {
+      "gold": 10,
+      "silver": 10,
+      "bronze": 9,
+      "total": 29
+    },
+    "rank": 7
+  },
+  {
+    "id": "8",
+    "name": "Takeo",
+    "khmerName": "តាកែវ",
+    "athleteCount": 48,
+    "medals": {
+      "gold": 9,
+      "silver": 9,
+      "bronze": 8,
+      "total": 26
+    },
+    "rank": 8
+  },
+  {
+    "id": "9",
+    "name": "Kampong Thom",
+    "khmerName": "កំពង់ធំ",
+    "athleteCount": 46,
+    "medals": {
+      "gold": 8,
+      "silver": 8,
+      "bronze": 7,
+      "total": 23
+    },
+    "rank": 9
+  },
+  {
+    "id": "10",
+    "name": "Banteay Meanchey",
+    "khmerName": "បន្ទាយមានជ័យ",
+    "athleteCount": 44,
+    "medals": {
+      "gold": 7,
+      "silver": 7,
+      "bronze": 6,
+      "total": 20
+    },
+    "rank": 10
+  },
+  {
+    "id": "11",
+    "name": "Kampot",
+    "khmerName": "កំពត",
+    "athleteCount": 40,
+    "medals": {
+      "gold": 6,
+      "silver": 6,
+      "bronze": 5,
+      "total": 17
+    },
+    "rank": 11
+  },
+  {
+    "id": "12",
+    "name": "Sihanoukville",
+    "khmerName": "ព្រះសីហនុ",
+    "athleteCount": 38,
+    "medals": {
+      "gold": 5,
+      "silver": 6,
+      "bronze": 5,
+      "total": 16
+    },
+    "rank": 12
+  },
+  {
+    "id": "13",
+    "name": "Svay Rieng",
+    "khmerName": "ស្វាយរៀង",
+    "athleteCount": 36,
+    "medals": {
+      "gold": 5,
+      "silver": 5,
+      "bronze": 4,
+      "total": 14
+    },
+    "rank": 13
+  },
+  {
+    "id": "14",
+    "name": "Kampong Chhnang",
+    "khmerName": "កំពង់ឆ្នាំង",
+    "athleteCount": 34,
+    "medals": {
+      "gold": 4,
+      "silver": 5,
+      "bronze": 4,
+      "total": 13
+    },
+    "rank": 14
+  },
+  {
+    "id": "15",
+    "name": "Pursat",
+    "khmerName": "ពោធិ៍សាត់",
+    "athleteCount": 32,
+    "medals": {
+      "gold": 4,
+      "silver": 4,
+      "bronze": 4,
+      "total": 12
+    },
+    "rank": 15
+  },
+  {
+    "id": "16",
+    "name": "Kep",
+    "khmerName": "កែប",
+    "athleteCount": 28,
+    "medals": {
+      "gold": 3,
+      "silver": 4,
+      "bronze": 3,
+      "total": 10
+    },
+    "rank": 16
+  },
+  {
+    "id": "17",
+    "name": "Koh Kong",
+    "khmerName": "កោះកុង",
+    "athleteCount": 26,
+    "medals": {
+      "gold": 3,
+      "silver": 3,
+      "bronze": 3,
+      "total": 9
+    },
+    "rank": 17
+  },
+  {
+    "id": "18",
+    "name": "Kratie",
+    "khmerName": "ក្រចេះ",
+    "athleteCount": 24,
+    "medals": {
+      "gold": 2,
+      "silver": 3,
+      "bronze": 3,
+      "total": 8
+    },
+    "rank": 18
+  },
+  {
+    "id": "19",
+    "name": "Oddar Meanchey",
+    "khmerName": "ឧត្តរមានជ័យ",
+    "athleteCount": 22,
+    "medals": {
+      "gold": 2,
+      "silver": 3,
+      "bronze": 2,
+      "total": 7
+    },
+    "rank": 19
+  },
+  {
+    "id": "20",
+    "name": "Preah Vihear",
+    "khmerName": "ព្រះវិហារ",
+    "athleteCount": 20,
+    "medals": {
+      "gold": 2,
+      "silver": 2,
+      "bronze": 2,
+      "total": 6
+    },
+    "rank": 20
+  },
+  {
+    "id": "21",
+    "name": "Stung Treng",
+    "khmerName": "ស្ទឹងត្រែង",
+    "athleteCount": 18,
+    "medals": {
+      "gold": 1,
+      "silver": 2,
+      "bronze": 2,
+      "total": 5
+    },
+    "rank": 21
+  },
+  {
+    "id": "22",
+    "name": "Ratanakiri",
+    "khmerName": "រតនគិរី",
+    "athleteCount": 16,
+    "medals": {
+      "gold": 1,
+      "silver": 2,
+      "bronze": 1,
+      "total": 4
+    },
+    "rank": 22
+  },
+  {
+    "id": "23",
+    "name": "Mondulkiri",
+    "khmerName": "មណ្ឌលគិរី",
+    "athleteCount": 14,
+    "medals": {
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "total": 3
+    },
+    "rank": 23
+  },
+  {
+    "id": "24",
+    "name": "Pailin",
+    "khmerName": "ប៉ៃលិន",
+    "athleteCount": 12,
+    "medals": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total": 2
+    },
+    "rank": 24
+  },
+  {
+    "id": "25",
+    "name": "Tboung Khmum",
+    "khmerName": "ត្បូងឃ្មុំ",
+    "athleteCount": 10,
+    "medals": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    "rank": 25
+  }
+]

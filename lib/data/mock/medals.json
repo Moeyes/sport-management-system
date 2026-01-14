@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "athleteId": "1",
+    "athleteName": "SAT PANHA",
+    "sportId": "8",
+    "sportName": "Boxing",
+    "eventId": "evt-1",
+    "eventName": "National Game",
+    "medalType": "gold",
+    "province": "Phnom Penh",
+    "awardedDate": "2025-12-10"
+  }
+]
