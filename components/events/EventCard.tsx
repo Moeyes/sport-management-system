@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLocation } from "wouter";
 
-export function EventCard({ event, index, onClick }: { event: any; index: number; onClick?: () => void }) {
+export function EventCard({ event, onClick }: { event: any; index: number; onClick?: () => void }) {
   const [, setLocation] = useLocation();
   const defaultHref = `/events/${event.id}`;
 
@@ -17,6 +17,7 @@ export function EventCard({ event, index, onClick }: { event: any; index: number
             <ChevronRight className="h-4 w-4" />
           </div>
         </CardHeader>
+        
 
         <CardContent className="p-6 space-y-4">
           <div className="flex items-center gap-2 text-muted-foreground">
@@ -40,17 +41,13 @@ export function EventCard({ event, index, onClick }: { event: any; index: number
                 );
               })}
             </div>
-            <div className="inline-flex h-10 items-center justify-center rounded-full bg-secondary/50 px-4">
-              <span className="text-sm font-medium text-primary">Join Event</span>
-            </div>
           </div>
         </CardContent>
       </Card>
     </motion.div>
   );
 
-  // If an explicit onClick is provided, keep the card interactive via onClick.
-  // Otherwise render it as a link to the event detail page.
+
   if (onClick) {
     return (
       <div onClick={onClick} className="w-full">

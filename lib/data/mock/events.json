@@ -6,12 +6,25 @@
     "endDate": "2026-04-14",
     "status": "upcoming",
     "sports": [
-      { "id": "athletics", "name": "Athletics", "categories": ["Track", "Field"], "status": "upcoming" },
-      { "id": "football", "name": "Football", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "athletics", "name": "Athletics", "categories": ["Track", "Field", "Combined Events", "Road Race"], "status": "upcoming" },
+      { "id": "football", "name": "Football", "categories": ["Men", "Women", "U18"], "status": "upcoming" },
       { "id": "boxing", "name": "Boxing", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "swimming", "name": "Swimming", "categories": ["Freestyle", "Backstroke"], "status": "upcoming" }
+      { "id": "swimming", "name": "Swimming", "categories": ["Freestyle", "Backstroke", "Breaststroke", "Butterfly", "Medley"], "status": "upcoming" },
+      { "id": "badminton", "name": "Badminton", "categories": ["Men Singles", "Women Singles", "Men Doubles", "Women Doubles", "Mixed Doubles"], "status": "upcoming" },
+      { "id": "volleyball", "name": "Volleyball", "categories": ["Indoor Men", "Indoor Women", "Beach Men", "Beach Women"], "status": "upcoming" },
+      { "id": "basketball", "name": "Basketball", "categories": ["5x5 Men", "5x5 Women", "3x3 Men", "3x3 Women"], "status": "upcoming" },
+      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Kyorugi", "Poomsae"], "status": "upcoming" },
+      { "id": "karate", "name": "Karate", "categories": ["Kata", "Kumite"], "status": "upcoming" },
+      { "id": "wrestling", "name": "Wrestling", "categories": ["Freestyle", "Greco-Roman"], "status": "upcoming" },
+      { "id": "weightlifting", "name": "Weightlifting", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "judo", "name": "Judo", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "petanque", "name": "Petanque", "categories": ["Singles", "Doubles", "Triples"], "status": "upcoming" },
+      { "id": "cycling", "name": "Cycling", "categories": ["Road Race", "Time Trial", "Mountain Bike"], "status": "upcoming" },
+      { "id": "table-tennis", "name": "Table Tennis", "categories": ["Men Singles", "Women Singles", "Men Doubles", "Women Doubles", "Mixed Doubles"], "status": "upcoming" },
+      { "id": "kun-khmer", "name": "Kun Khmer", "categories": ["Men", "Women"], "status": "upcoming" }
     ]
   },
+
   {
     "id": "evt-2",
     "name": "Regional Championships 2025",
@@ -19,9 +32,51 @@
     "endDate": "2025-11-16",
     "status": "completed",
     "sports": [
-      { "id": "badminton", "name": "Badminton", "categories": ["Singles", "Doubles"], "status": "Completed" },
-      { "id": "volleyball", "name": "Volleyball", "categories": ["Indoor", "Beach"], "status": "Completed" },
-      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Poomse", "Kyorugi"], "status": "Completed" }
+      { "id": "badminton", "name": "Badminton", "categories": ["Singles", "Doubles"], "status": "completed" },
+      { "id": "volleyball", "name": "Volleyball", "categories": ["Indoor", "Beach"], "status": "completed" },
+      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Poomsae", "Kyorugi"], "status": "completed" }
+    ]
+  },
+
+  {
+    "id": "evt-3",
+    "name": "National Youth Games 2026",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-12",
+    "status": "upcoming",
+    "sports": [
+      { "id": "athletics", "name": "Athletics", "categories": ["U16", "U18"], "status": "upcoming" },
+      { "id": "football", "name": "Football", "categories": ["U16", "U18"], "status": "upcoming" },
+      { "id": "swimming", "name": "Swimming", "categories": ["U16", "U18"], "status": "upcoming" },
+      { "id": "basketball", "name": "Basketball", "categories": ["3x3 U18", "5x5 U18"], "status": "upcoming" }
+    ]
+  },
+
+  {
+    "id": "evt-4",
+    "name": "National University Games 2026",
+    "startDate": "2026-09-01",
+    "endDate": "2026-09-10",
+    "status": "upcoming",
+    "sports": [
+      { "id": "football", "name": "Football", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "volleyball", "name": "Volleyball", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "basketball", "name": "Basketball", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "badminton", "name": "Badminton", "categories": ["Singles", "Doubles"], "status": "upcoming" }
+    ]
+  },
+
+  {
+    "id": "evt-5",
+    "name": "Cambodia National Combat Sports Championship 2026",
+    "startDate": "2026-11-15",
+    "endDate": "2026-11-22",
+    "status": "upcoming",
+    "sports": [
+      { "id": "boxing", "name": "Boxing", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "kun-khmer", "name": "Kun Khmer", "categories": ["Men", "Women"], "status": "upcoming" },
+      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Kyorugi", "Poomsae"], "status": "upcoming" },
+      { "id": "karate", "name": "Karate", "categories": ["Kata", "Kumite"], "status": "upcoming" }
     ]
   }
 ]

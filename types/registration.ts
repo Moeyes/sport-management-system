@@ -1,14 +1,13 @@
 //registation
 import React from 'react';
-import type { ParticipationGender, ParticipationNationality, ParticipationPosition, ParticipationOrganization } from './participation'
+import type { ParticipationGender, ParticipationNationality, PositionInfo, OrganizationInfo } from './participation'
 
 export interface FormData {
   selectedSport?: string | string[] | null;
-
   id?: string;
   registeredAt?: string | number | Date;
-  // Support either full `name` (as collected by the UI) or optional first/last name fields
-  name?: string;
+  // name?: string;
+
   firstName?: string;
   lastName?: string;
   firstNameKh?: string;
@@ -16,34 +15,18 @@ export interface FormData {
   gender?: ParticipationGender;
   dateOfBirth?: string;
   nationality?: ParticipationNationality;
-  position: ParticipationPosition | null;
-  organization?: ParticipationOrganization | null;
-
-  photoUpload?: File | null;
+  nationalID?: string;
+  phone?: string;
   photoUrl?: string;
+  photoUpload?: File | null;
 
-  sportCategory?: string | null;
+  position?: PositionInfo | null;
+  organization?: OrganizationInfo | null;
+
+  sport: string;
   sports: string[];
   eventId?: string | null;
-  sportId?: string | null;
 
-  registrationDate?: string;
-  phone?: string;
-  phoneNumber?: string;
-  email?: string;
-  nationalID?: string;
-
-  province?: string;
-  department?: string;
-
-  coach?: string;
-  assistant?: string;
-  event?: string;
-  sport?: string;
-
-  eventType?: string | null;
-  typeOfSport?: string | null;
-  category?: string | null;
 }
 
 export interface FormErrors {
@@ -52,6 +35,7 @@ export interface FormErrors {
   eventType?: string;
   typeOfSport?: string;
   selectedSport?: string;
+  sport?: string;
   firstName?: string;
   lastName?: string;
   nationalID?: string;
@@ -59,6 +43,7 @@ export interface FormErrors {
   gender?: string;
   email?: string;
   position?: string;
+  phone?: string;
   phoneNumber?: string;
   photoUpload?: string;
   sports?: string;

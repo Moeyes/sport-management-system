@@ -1,11 +1,11 @@
 /**
  * useRegister Hook
- * Handles athlete registration form submission
+ * Handles participant registration form submission
  */
 
 import { useState, useEffect, useRef } from "react";
 import { emitDashboardRefresh } from "./eventBus";
-import { addAthlete } from "../lib/data/writer/dataWriter";
+import { addParticipant } from "../lib/data/writer/dataWriter";
 import { FormData } from "../types/registration";
 
 interface UseRegisterReturn {
@@ -45,24 +45,21 @@ export const useRegister = (): UseRegisterReturn => {
         setSuccess(false);
       }
 
-      // Map FormData to Athlete format
-      const athleteData = {
+      // Map FormData to Participant format (includes role identity)
+      const participantData = {
         firstName: formData.firstName,
         lastName: formData.lastName,
         firstNameKh: formData.firstNameKh || undefined,
         lastNameKh: formData.lastNameKh || undefined,
         dateOfBirth: formData.dateOfBirth,
-        gender: (formData.gender || "male") as "male" | "female" | "other",
-        province: formData.province || "",
-        department: formData.department || undefined,
-        eventType: formData.eventType || undefined,
-        sports: formData.selectedSport ? [formData.selectedSport] : [],
-        sportCategory:
-          formData.sportCategory || formData.typeOfSport || undefined,
-        position: formData.position || undefined,
+        gender: (formData.gender === "Female" ? "Female" : "Male") as "Male" | "Female",
+        nationality: formData.nationality || undefined,
+        role: formData.position?.role || undefined,
+        organization: formData.organization || undefined,
+        sports: (formData.sports && formData.sports.length) ? formData.sports : (formData.sport ? [formData.sport] : []),
+        sportCategory: formData.sport || undefined,
         nationalID: formData.nationalID || undefined,
-        email: formData.email || "",
-        phone: formData.phoneNumber,
+        phone: formData.phone || undefined,
         registrationDate: new Date().toISOString().split("T")[0],
         registeredAt: new Date().toISOString(),
         status: "approved" as const,
@@ -72,7 +69,7 @@ export const useRegister = (): UseRegisterReturn => {
           : "/avatars/default.jpg",
       };
 
-      await addAthlete(athleteData);
+      await addParticipant(participantData);
 
       if (isMountedRef.current) {
         setSuccess(true);

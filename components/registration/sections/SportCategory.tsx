@@ -1,13 +1,16 @@
 import type { Event } from "@/types";
 import { Button } from "@/components/ui/button";
 
+import type { FormErrors } from '@/types/registration'
+
 interface SportCategoryProps {
   event?: Event;
   selectedSport?: string;
   onSelect: (category: string) => void;
+  errors?: Partial<FormErrors>;
 }
 
-export function SportCategory({ event, selectedSport, onSelect }: SportCategoryProps) {
+export function SportCategory({ event, selectedSport, onSelect, errors }: SportCategoryProps) {
   const normalized: { id: string; name: string; categories: string[] }[] =
     (event?.sports ?? []).map((s: any) =>
       typeof s === "string"
@@ -26,7 +29,8 @@ export function SportCategory({ event, selectedSport, onSelect }: SportCategoryP
 
   return (
     <div className="space-y-6 text-center">
-      <h2 className="text-3xl font-bold">Select Category</h2>
+      <h2 className="text-3xl font-bold">ជ្រើសប្រភេទ</h2>
+      {errors?.sport && <p className="text-sm text-red-600 mt-1">{errors.sport}</p>}
       <div className="grid grid-cols-1 gap-4 max-w-md mx-auto">
         {categories.map((cat) => (
           <Button

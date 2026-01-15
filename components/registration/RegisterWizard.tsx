@@ -8,25 +8,21 @@ import { SportCategory } from "./sections/SportCategory";
 import { PositionSelector } from "./sections/PositionSelector";
 import { LocationDetails } from "./sections/LocationDetails";
 import { PersonalInfo } from "./sections/PersonalInfo";
+import { useRegistrationForm } from "@/services/useRegistrationForm";
 import { RegistrationAction } from "./RegistrationAction";
 import { EventCard } from "@/components/events/EventCard";
 import { useEvents } from "@/hooks/useEvents";
+import type { FormData as RegistrationFormData } from "@/types/registration";
+import { validateForm } from "@/lib/validation/validators";
+import type { FormErrors } from "@/types/registration";
 
 export default function RegistrationWizard() {
   const { eventId } = useParams();
   const { events, loading: eventsLoading } = useEvents();
   const [ selectedEvent, setSelectedEvent ] = useState<(typeof events)[number] | null>(null);
   const [ step, setStep] = useState(1);
-  const [ formData, setFormData] = useState({
-    sport: "",
-    category: "",
-    position: "",
-    leaderRole: "",
-    location: "",
-    name: "",
-    email: "",
-    phone: "",
-  });
+  // use shared registration form hook
+  const { formData, setField, errors, validate, setFormErrors } = useRegistrationForm();
 
   const nextStep = () => setStep((s) => Math.min(s + 1, 7));
   const prevStep = () => {
@@ -36,20 +32,56 @@ export default function RegistrationWizard() {
     });
   };
 
-  const updateFormData = (data: Partial<typeof formData>) => {
-    setFormData((prev) => ({ ...prev, ...data }));
+  const updateFormData = (data: Partial<RegistrationFormData>) => {
+    setField(data);
   };
+
+  const stepFieldMap: Record<number, string[]> = {
+    2: ['sport', 'selectedSport', 'sports'],
+    3: ['sport', 'sports'],
+    4: ['position'],
+    5: ['province', 'organization'],
+    6: ['firstName', 'lastName', 'dateOfBirth', 'nationalID', 'gender', 'phone', 'photoUpload'],
+  };
+
+  const attemptAdvance = (dataUpdate?: Partial<RegistrationFormData>, stepToCheck = step) => {
+    const future = { ...formData, ...(dataUpdate || {}) } as RegistrationFormData;
+    const e = validateForm(future);
+
+    const keysToCheck = stepFieldMap[stepToCheck] ?? [];
+
+    // Only surface errors that are relevant to this step (avoid showing all errors globally)
+    const filteredErrors: Partial<FormErrors> = {};
+    if (keysToCheck.length > 0) {
+      for (const [k, v] of Object.entries(e)) {
+        if (keysToCheck.includes(k)) {
+          (filteredErrors as any)[k] = v;
+        }
+      }
+    }
+
+    setField(dataUpdate || {});
+
+    if (Object.keys(filteredErrors).length > 0) {
+      setFormErrors(filteredErrors);
+      return;
+    }
+
+    // No relevant errors for this step; clear step errors and advance
+    setFormErrors({});
+    nextStep();
+  };
+
 
   return (
     <div className="min-h-screen bg-[#fafafa] p-6">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8 flex justify-between items-center">
           <Button variant="ghost" onClick={prevStep} disabled={step === 1}>
-            Back
+            ត្រលប់
           </Button>
-          <Badge variant="secondary">Step {step} of 7</Badge>
+          <Badge variant="secondary">ជំហាន {step} នៃ 7</Badge>
         </div>
-        {/* Event selection (step 1) */}
         {step === 1 && (
           <div className="mb-6">
             {eventsLoading ? (
@@ -70,13 +102,12 @@ export default function RegistrationWizard() {
               </div>
             ) : (
               <div className="rounded-lg bg-slate-50 p-6 text-center">
-                No events available.
+                មិនមានព្រឹត្តិការណ៍ទេ។
               </div>
             )}
           </div>
         )}
 
-        {/* Selected event preview (shown once an event is chosen) */}
         <AnimatePresence mode="wait">
           <motion.div
             key={step}
@@ -86,12 +117,10 @@ export default function RegistrationWizard() {
           >
             {step === 2 && selectedEvent &&(
               <SportSelection
-                // event={selectedEvent}
                 event={selectedEvent}
-                selectedSport={formData.sport}
+                selectedSport={formData.sport || ""}
                 onSelect={(sport) => {
-                  updateFormData({ sport, category: "" });
-                  nextStep();
+                  attemptAdvance({ sport }, 2);
                 }}
               />
             )}
@@ -100,37 +129,37 @@ export default function RegistrationWizard() {
                 event={selectedEvent}
                 selectedSport={formData.sport}
                 onSelect={(category) => {
-                  updateFormData({ category });
-                  nextStep();
+                  attemptAdvance({ category } as Partial<RegistrationFormData>, 3);
                 }}
               />
             )}
             {step === 4 && (
               <PositionSelector
-                formData={formData}
-                updateFormData={updateFormData}
-                onNext={nextStep}
+                formData={{ position: formData.position as any }}
+                updateFormData={(data) => updateFormData({ position: { ...(formData.position as any), ...(data.position ?? data) } })}
+                onNext={() => attemptAdvance(undefined, 4)}
               />
             )}
             {step === 5 && (
               <LocationDetails
-                selectedLocation={formData.location}
-                onSelect={(location) => {
-                  updateFormData({ location });
-                  nextStep();
+                selectedOrganization={formData.organization as any}
+                onSelect={(organization) => {
+                  attemptAdvance({ organization }, 5);
                 }}
+                errors={errors as Partial<FormErrors>}
               />
             )}
             {step === 6 && (
               <PersonalInfo
-                formData={formData}
+                formData={formData as any}
                 updateFormData={updateFormData}
-                onNext={nextStep}
+                onNext={() => attemptAdvance(undefined, 6)}
+                errors={errors as Partial<FormErrors>}
               />
             )}
             {step === 7 && (
               <RegistrationAction
-                formData={formData}
+                formData={formData as RegistrationFormData}
                 eventId={selectedEvent?.id ?? eventId ?? ""}
               />
             )}
