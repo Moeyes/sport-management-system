@@ -1,9 +1,11 @@
 import type { Event } from "@/types";
+import type { FormErrors } from '@/types/registration'
 
 interface SportSelectionProps {
   event?: Event;
   selectedSport: string;
   onSelect: (sport: string) => void;
+  errors?: Partial<FormErrors>;
 }
 
 const SPORTS: { id: string; name: string; categories: string[] }[] = [
@@ -16,7 +18,7 @@ const SPORTS: { id: string; name: string; categories: string[] }[] = [
   { id: "taekwondo", name: "Taekwondo", categories: [] },
 ];
 
-export function SportSelection({ event, selectedSport, onSelect }: SportSelectionProps) {
+export function SportSelection({ event, selectedSport, onSelect, errors }: SportSelectionProps) {
   const raw = event?.sports ?? SPORTS;
   const sports = raw.map((s: any) =>
     typeof s === "string"
@@ -27,10 +29,11 @@ export function SportSelection({ event, selectedSport, onSelect }: SportSelectio
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Select Your Sport</h2>
+        <h2 className="text-3xl font-bold tracking-tight">ជ្រើសរើសកីឡា</h2>
         <p className="text-muted-foreground text-lg">
-          Choose the discipline you wish to participate in
+          ជ្រើសប្រកួតដែលអ្នកចង់ចូលរួម
         </p>
+        {errors?.sport && <p className="text-sm text-red-600 mt-1">{errors.sport}</p>}
       </div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         {sports.map((sport) => (

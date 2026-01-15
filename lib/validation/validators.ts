@@ -57,49 +57,47 @@ export function validateForm(data: FormData): FormErrors {
 
   // Required text fields
   if (!data.firstName?.trim()) {
-    errors.firstName = 'First name is required.';
+    errors.firstName = 'សូមបញ្ចូលគោត្តនាម។';
   }
 
   if (!data.lastName?.trim()) {
-    errors.lastName = 'Last name is required.';
+    errors.lastName = 'សូមបញ្ចូលនាម។';
   }
 
-  // Email validation
-  if (!data.email?.trim()) {
-    errors.email = 'Email address is required.';
-  } else if (!isValidEmail(data.email)) {
-    errors.email = 'Please enter a valid email address.';
-  }
-
-  // Phone validation
-  if (!data.phoneNumber?.trim()) {
-    errors.phoneNumber = 'Phone number is required.';
-  } else if (!isValidPhone(data.phoneNumber)) {
-    errors.phoneNumber = 'Enter a valid phone number (7–15 digits).';
+  // Phone validation (accept current `phone` or legacy `phoneNumber`)
+  const phoneValue = (data.phone ?? (data as any).phoneNumber) as string | undefined;
+  if (!phoneValue?.trim()) {
+    errors.phone = 'សូមបញ្ចូលលេខទូរស័ព្ទ។';
+    // keep legacy key for backward compatibility
+    errors.phoneNumber = 'សូមបញ្ចូលលេខទូរស័ព្ទ។';
+  } else if (!isValidPhone(phoneValue)) {
+    errors.phone = 'សូមបញ្ចូលលេខទូរស័ព្ទត្រឹមត្រូវ (7–15 ខ្ទង់).';
+    errors.phoneNumber = errors.phone;
   }
 
   // Date of birth validation
   if (!data.dateOfBirth) {
-    errors.dateOfBirth = 'Date of birth is required.';
+    errors.dateOfBirth = 'សូមបញ្ចូលថ្ងៃខែឆ្នាំកំណើត។';
   } else if (!isValidPastDate(data.dateOfBirth)) {
-    errors.dateOfBirth = 'Date of birth must be a valid past date.';
+    errors.dateOfBirth = 'ថ្ងៃកំណើតត្រូវតែជាកាលបរិច្ឆេទមុនថ្ងៃនេះ។';
   }
 
-  // Province validation
-  if (!data.province) {
-    errors.province = 'Please select a province.';
+  // Province validation (organization-based)
+  if (data.organization?.type === 'Province' && !data.organization?.province) {
+    errors.province = 'សូមជ្រើសរើសខេត្ត។';
   }
 
   // National ID validation
   if (!data.nationalID?.trim()) {
-    errors.nationalID = 'National ID is required.';
+    errors.nationalID = 'សូមបញ្ចូលលេខអត្តសញ្ញាណជាតិ។';
   } else if (!isWithinLength(data.nationalID, 6, 20)) {
-    errors.nationalID = 'National ID must be between 6 and 20 characters.';
+    errors.nationalID = 'លេខអត្តសញ្ញាណត្រូវមានចន្លោះពី 6 ទៅ 20 តួអក្សរ។';
   }
 
-  // Sport selection validation
-  if (!data.selectedSport) {
-    errors.selectedSport = 'Please select a sport.';
+  // Sport selection validation (accept `sport` or legacy `selectedSport`)
+  if (!data.sport && !data.selectedSport) {
+    errors.selectedSport = 'សូមជ្រើសរើសកីឡា។';
+    errors.sport = 'សូមជ្រើសរើសកីឡា។';
   }
 
   // Photo upload validation (optional but if present, must be valid)
@@ -108,9 +106,9 @@ export function validateForm(data: FormData): FormErrors {
     const maxSize = 2 * 1024 * 1024; // 2MB
     
     if (!file.type.startsWith('image/')) {
-      errors.photoUpload = 'Only image files are allowed (JPG, PNG, etc.).';
+      errors.photoUpload = 'សូមផ្ទុកឡើងឯកសាររូបភាពតែប៉ុណ្ណោះ (JPG, PNG, ...).';
     } else if (file.size > maxSize) {
-      errors.photoUpload = 'Image must be 2MB or smaller.';
+      errors.photoUpload = 'ទំហំរូបភាពត្រូវតែ 2MB ឬតូចជាង។';
     }
   }
 

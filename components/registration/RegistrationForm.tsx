@@ -1,35 +1,39 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { useRegister } from "@/services/useRegister"
-import { PersonalInfo } from "./sections/PersonalInfoField"
-import { ContactInfo } from "./sections/ContactField"
-import { LocationDetails } from "./sections/LocationField"
-import { useRouter } from "next/navigation"
+import { Button } from "@/components/ui/button";
+import { useRegistrationForm } from "@/services/useRegistrationForm";
+import { PersonalInfo } from "./sections/PersonalInfo";
+import { PositionSelector } from "./sections/PositionSelector";
+import { LocationDetails } from "./sections/LocationDetails";
+import { useRouter } from "next/navigation";
+import type { FormData as RegistrationFormData } from "@/types/registration";
 
 export function RegistrationForm() {
-  const { formData, setField, reset } = useRegister() as any
-  const router = useRouter()
-  const submit = async () => {
-    await fetch("/api/athletes", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: { "Content-Type": "application/json" }
-    })
-    reset()
-    router.push("/?view=athletes")
-  }
+  const { formData, setField, reset, submit, loading } = useRegistrationForm();
+  const router = useRouter();
+
+  const submitForm = async () => {
+    await submit();
+    reset();
+    router.push("/?view=athletes");
+  };
 
   return (
     <form className="max-w-3xl mx-auto space-y-8 p-6 bg-white rounded-2xl shadow-sm">
-      <LocationDetails formData={formData} handleChange={setField} />
-      <PersonalInfo formData={formData} handleChange={setField} />
-      <ContactInfo formData={formData} handleChange={setField} />
+      <LocationDetails selectedOrganization={formData.organization as any} onSelect={(organization) => setField({ organization })} />
+
+      <PositionSelector
+        formData={{ position: formData.position as any }}
+        updateFormData={(data) => setField({ position: { ...(formData.position as any), ...(data.position ?? data) } })}
+        onNext={() => {}}
+      />
+
+      <PersonalInfo formData={formData as any} updateFormData={(d: Partial<RegistrationFormData>) => setField(d)} onNext={() => {}} />
 
       <div className="flex justify-between sticky bottom-0 bg-white pt-6">
         <Button variant="ghost" onClick={reset}>Reset Form</Button>
-        <Button className="bg-[#1a4cd8]" onClick={submit}>Submit</Button>
+        <Button className="bg-[#1a4cd8]" onClick={submitForm} disabled={loading}>{loading ? "Submitting..." : "Submit"}</Button>
       </div>
     </form>
-  )
+  );
 }

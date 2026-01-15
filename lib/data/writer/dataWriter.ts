@@ -36,6 +36,16 @@ export async function addAthlete(athleteData: Omit<Athlete, 'id'>): Promise<Athl
 }
 
 /**
+ * Add a new participant (wrapper)
+ * Currently delegates to addAthlete for backward compatibility with the API
+ */
+export async function addParticipant(participantData: Partial<Athlete>): Promise<Athlete> {
+  // Keep existing behaviour and endpoint, but expose a more accurate semantic name
+  // Accept Partial to allow registrations that may have optional fields omitted
+  return addAthlete(participantData as any);
+}
+
+/**
  * Update an existing athlete
  */
 export async function updateAthlete(id: string, athleteData: Partial<Athlete>): Promise<Athlete> {
