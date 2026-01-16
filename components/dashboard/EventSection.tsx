@@ -19,7 +19,7 @@ export function EventsSection({
         <CreateEventDialog onCreate={onCreate} />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="responsive-grid">
         {events.map((event) => (
           <EventCard
             key={event.id}

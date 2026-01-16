@@ -117,7 +117,7 @@ export function PersonalInfo({
       <Button
         className="w-full h-12 rounded-full"
         onClick={onNext}
-        disabled={!(formData.firstName || formData.lastName)}
+        disabled={!(formData.firstName || formData.lastName || formData.firstNameKh || formData.lastNameKh)}
       >
         បន្ត
       </Button>

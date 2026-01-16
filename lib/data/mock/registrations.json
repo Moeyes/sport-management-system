@@ -1,31 +1,37 @@
 [
   {
-    "id": "1768463115940",
-    "registeredAt": "2026-01-15T07:45:15.940Z",
+    "id": "1768536368150",
+    "registeredAt": "2026-01-16T04:06:08.150Z",
+    "photoUrl": null,
     "firstName": "Sat ",
     "lastName": "Panha",
-    "gender": "Male",
+    "firstNameKh": "សាត",
+    "lastNameKh": "បញ្ញា",
     "dateOfBirth": "2005-08-17",
-    "nationality": "BirthCertificate",
+    "gender": "Male",
+    "nationality": "IDCard",
+    "nationalID": "1300058",
+    "phone": "0964461381",
     "position": {
       "role": "Athlete",
       "coach": null,
       "assistant": null
     },
     "organization": {
-      "type": "Province",
+      "type": "province",
       "province": "Phnom Penh",
       "department": null
     },
-    "nationalID": "130058",
     "eventId": "evt-1",
-    "phone": "0964461381",
-    "sport": "Taekwondo",
-    "sports": [],
-    "photoUrl": "/uploads/1768463115936-1768463114634-photo.jpg",
-    "category": "Kyorugi",
-    "firstNameKh": "សាត",
-    "lastNameKh": "បញ្ញា",
-    "photoUpload": {}
+    "sport": "អត្តពលកម្ម",
+    "sports": [
+      "អត្តពលកម្ម"
+    ],
+    "sportId": "",
+    "sportCategory": "រត់ប្រណាំង ១០០ ម៉ែត្រ",
+    "registrationType": "individual",
+    "teamId": null,
+    "teamName": null,
+    "isTeamLeader": false
   }
 ]

@@ -57,7 +57,7 @@ export const useRegister = (): UseRegisterReturn => {
         role: formData.position?.role || undefined,
         organization: formData.organization || undefined,
         sports: (formData.sports && formData.sports.length) ? formData.sports : (formData.sport ? [formData.sport] : []),
-        sportCategory: formData.sport || undefined,
+        sportCategory: (formData as any).category ?? formData.sport ?? undefined,
         nationalID: formData.nationalID || undefined,
         phone: formData.phone || undefined,
         registrationDate: new Date().toISOString().split("T")[0],

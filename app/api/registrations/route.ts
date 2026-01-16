@@ -27,6 +27,38 @@ export async function GET() {
   return NextResponse.json(regs)
 }
 
+// helper extracted for tests and reuse
+export async function createTeamAndMemberRegistrations(body: any) {
+  const { normalizeTeam, normalizeRegistration } = await import('@/lib/data/normalizers/registrationNormalizer')
+  const teamsFile = path.join(process.cwd(), '/lib/data/mock/teams.json')
+  const teamsRaw = await fs.readFile(teamsFile, 'utf-8')
+  const teamsArr = JSON.parse(teamsRaw || '[]')
+
+  const teamData = normalizeTeam(body)
+  const teamId = String(Date.now())
+  const teamRecord = { id: teamId, ...teamData }
+  teamsArr.push(teamRecord)
+  await fs.writeFile(teamsFile, JSON.stringify(teamsArr, null, 2), 'utf-8')
+
+  // create registration entries for each team member
+  const members = body.teamMembers ?? []
+  const regsArr = await readRegistrations()
+  const now = new Date().toISOString()
+  for (const m of members) {
+    const memberPayload = { ...body, ...m, registrationType: 'team', teamId, teamName: teamRecord.name }
+    const normMember = normalizeRegistration(memberPayload as Partial<FormData>)
+    const memberCreated = {
+      id: String(Date.now()) + String(Math.floor(Math.random() * 1000)),
+      registeredAt: now,
+      photoUrl: null,
+      ...normMember,
+    } as any
+    regsArr.push(memberCreated)
+  }
+  await writeRegistrations(regsArr)
+  return teamRecord
+}
+
 export async function POST(request: Request) {
   try {
     const contentType = request.headers.get('content-type') || ''
@@ -76,49 +108,37 @@ export async function POST(request: Request) {
     const id = String(Date.now())
     const now = new Date().toISOString()
 
-    const { province, department, coach, assistant, position: positionInBody, organization: orgInBody, ...rest } = body as any
+    // Normalize the incoming payload so the stored data is consistent and easy to consume
+    // Import normalization helper to keep mapping logic centralized
+    const { normalizeRegistration } = await import('@/lib/data/normalizers/registrationNormalizer')
+    const normalized = normalizeRegistration(body as Partial<FormData>)
 
-    const organization = typeof orgInBody === 'object'
-      ? {
-          type: orgInBody.type ?? null,
-          province: orgInBody.province ?? province ?? null,
-          department: orgInBody.department ?? department ?? null,
-        }
-      : {
-          type: orgInBody ?? null,
-          province: province ?? department ?? null,
-          department: department ?? null,
-        }
+    // Helpful debug output in dev to inspect normalized payload (safe-guarded)
+    if (process.env.NODE_ENV !== 'production') {
+      try {
+        console.debug('normalized registration:', JSON.stringify(normalized))
+      } catch (_e) {
+        // ignore serialization errors in debug
+      }
+    }
 
-    const position = typeof positionInBody === 'object'
-      ? {
-          role: positionInBody.role ?? positionInBody ?? null,
-          coach: positionInBody.coach ?? coach ?? null,
-          assistant: positionInBody.assistant ?? assistant ?? null,
-        }
-      : {
-          role: positionInBody ?? null,
-          coach: coach ?? null,
-          assistant: assistant ?? null,
-        }
+    // If this is a team registration, create a team record and member registrations
+    if ((body as any).registrationType === 'team') {
+      try {
+        const team = await createTeamAndMemberRegistrations(body)
+        return new Response(JSON.stringify(team), { status: 201, headers: { "Content-Type": "application/json" } })
+      } catch (err) {
+        console.error('Failed to create team and member registrations', err)
+        return new Response(JSON.stringify({ message: 'Failed to create team' }), { status: 500, headers: { 'Content-Type': 'application/json' } })
+      }
+    }
 
     const created = {
       id,
       registeredAt: now,
-      firstName: body.firstName ?? null,
-      lastName: body.lastName ?? null,
-      gender: body.gender ?? null,
-      dateOfBirth: body.dateOfBirth ?? null,
-      nationality: body.nationality ?? null,
-      position,
-      organization,
-      nationalID: body.nationalID ?? null,
-      eventId: body.eventId ?? null,
-      phone: body.phone ?? null,
-      sport: body.sport ?? (Array.isArray(body.sports) ? body.sports[0] : null),
-      sports: body.sports ?? (body.sport ? [body.sport] : []),
       photoUrl: photoUrl ?? (body.photoUrl ?? null),
-      ...rest,
+      ...normalized,
+      ...((body as any).extra ? (body as any).extra : {}),
     } as any
 
     regs.push(created)

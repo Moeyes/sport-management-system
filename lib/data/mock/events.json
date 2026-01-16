@@ -1,82 +1,373 @@
 [
   {
     "id": "evt-1",
-    "name": "National Games 2026",
-    "startDate": "2026-04-01",
-    "endDate": "2026-04-14",
+    "name": "កីឡាជាតិ លើកទី៥​ ឆ្នាំ២០២៦",
+    "startDate": "07-10-2026",
+    "endDate": "21-10-2026",
     "status": "upcoming",
     "sports": [
-      { "id": "athletics", "name": "Athletics", "categories": ["Track", "Field", "Combined Events", "Road Race"], "status": "upcoming" },
-      { "id": "football", "name": "Football", "categories": ["Men", "Women", "U18"], "status": "upcoming" },
-      { "id": "boxing", "name": "Boxing", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "swimming", "name": "Swimming", "categories": ["Freestyle", "Backstroke", "Breaststroke", "Butterfly", "Medley"], "status": "upcoming" },
-      { "id": "badminton", "name": "Badminton", "categories": ["Men Singles", "Women Singles", "Men Doubles", "Women Doubles", "Mixed Doubles"], "status": "upcoming" },
-      { "id": "volleyball", "name": "Volleyball", "categories": ["Indoor Men", "Indoor Women", "Beach Men", "Beach Women"], "status": "upcoming" },
-      { "id": "basketball", "name": "Basketball", "categories": ["5x5 Men", "5x5 Women", "3x3 Men", "3x3 Women"], "status": "upcoming" },
-      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Kyorugi", "Poomsae"], "status": "upcoming" },
-      { "id": "karate", "name": "Karate", "categories": ["Kata", "Kumite"], "status": "upcoming" },
-      { "id": "wrestling", "name": "Wrestling", "categories": ["Freestyle", "Greco-Roman"], "status": "upcoming" },
-      { "id": "weightlifting", "name": "Weightlifting", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "judo", "name": "Judo", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "petanque", "name": "Petanque", "categories": ["Singles", "Doubles", "Triples"], "status": "upcoming" },
-      { "id": "cycling", "name": "Cycling", "categories": ["Road Race", "Time Trial", "Mountain Bike"], "status": "upcoming" },
-      { "id": "table-tennis", "name": "Table Tennis", "categories": ["Men Singles", "Women Singles", "Men Doubles", "Women Doubles", "Mixed Doubles"], "status": "upcoming" },
-      { "id": "kun-khmer", "name": "Kun Khmer", "categories": ["Men", "Women"], "status": "upcoming" }
+      {
+        "id": "athletics",
+        "name": "អត្តពលកម្ម",
+        "categories": [
+          "រត់ប្រណាំង ១០០ ម៉ែត្រ",
+          "រត់ប្រណាំង ២០០ ម៉ែត្រ",
+          "រត់ប្រណាំង ៤០០ ម៉ែត្រ",
+          "រត់ប្រណាំង ៨០០ ម៉ែត្រ",
+          "រត់ប្រណាំង ១៥០០ ម៉ែត្រ",
+          "រត់ប្រណាំង ៥០០០ ម៉ែត្រ",
+          "រត់ប្រណាំង ១០,០០០ ម៉ែត្រ",
+          "រត់ឆ្លងឧបសគ្គ ១១០ ម៉ែត្រ",
+          "រត់ឆ្លងឧបសគ្គ ៤០០ ម៉ែត្រ",
+          "រត់ឆ្លងឧបសគ្គ ៣០០០ ម៉ែត្រ",
+          "រត់បញ្ជូន ៤ × ១០០ ម៉ែត្រ",
+          "រត់បញ្ជូន ៤ × ៤០០ ម៉ែត្រ",
+          "រត់ម៉ារ៉ាតុង",
+          "រត់ពាក់កណ្តាលម៉ារ៉ាតុង",
+          "លោតវែង",
+          "លោតបីជំហាន",
+          "លោតកម្ពស់",
+          "លោតដែក",
+          "គប់ទម្ងន់",
+          "គប់ឌីស",
+          "គប់ញញួរ",
+          "បោះលំពែង",
+          "ដេកាថ្លុង",
+          "ហេបថ្លុង"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "football",
+        "name": "បាល់ទាត់",
+        "categories": [
+          "បាល់ទាត់ ១១ នាក់ បុរស", 
+          "បាល់ទាត់ ១១ នាក់ នារី",
+          "បាល់ទាត់ អាយុក្រោម ១៨ ឆ្នាំ",
+          "បាល់ទាត់ ៧ នាក់"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "boxing",
+        "name": "ប្រដាល់សកល",
+        "categories": [
+          "ទម្ងន់ ៤៨ គីឡូក្រាម",
+          "ទម្ងន់ ៥១ គីឡូក្រាម",
+          "ទម្ងន់ ៥៤ គីឡូក្រាម",
+          "ទម្ងន់ ៥៧ គីឡូក្រាម",
+          "ទម្ងន់ ៦០ គីឡូក្រាម",
+          "ទម្ងន់ ៦៣.៥ គីឡូក្រាម",
+          "ទម្ងន់ ៦៧ គីឡូក្រាម",
+          "ទម្ងន់ ៧១ គីឡូក្រាម",
+          "ទម្ងន់ ៧៥ គីឡូក្រាម",
+          "ទម្ងន់ ៨១ គីឡូក្រាម",
+          "ទម្ងន់ ៩១ គីឡូក្រាម",
+          "លើស ៩១ គីឡូក្រាម"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "swimming",
+        "name": "ហែលទឹក",
+        "categories": [
+          "ហែលសេរី ៥០ ម៉ែត្រ",
+          "ហែលសេរី ១០០ ម៉ែត្រ",
+          "ហែលសេរី ២០០ ម៉ែត្រ",
+          "ហែលខ្នង ៥០ ម៉ែត្រ",
+          "ហែលខ្នង ១០០ ម៉ែត្រ",
+          "ហែលទ្រូង ៥០ ម៉ែត្រ",
+          "ហែលទ្រូង ១០០ ម៉ែត្រ",
+          "ហែលមេអំបៅ ៥០ ម៉ែត្រ",
+          "ហែលមេអំបៅ ១០០ ម៉ែត្រ",
+          "ហែលចម្រុះ ២០០ ម៉ែត្រ",
+          "ហែលបញ្ជូន ៤ × ១០០ ម៉ែត្រ"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "badminton",
+        "name": "ប៉ះសី",
+        "categories": [
+          "ឯកត្តជន បុរស",
+          "ឯកត្តជន នារី",
+          "គូ បុរស",
+          "គូ នារី",
+          "គូ ចម្រុះ"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "volleyball",
+        "name": "បាល់ទះ",
+        "categories": [
+          "បាល់ទះក្នុងសាល បុរស",
+          "បាល់ទះក្នុងសាល នារី",
+          "បាល់ទះឆ្នេរខ្សាច់ បុរស",
+          "បាល់ទះឆ្នេរខ្សាច់ នារី"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "basketball",
+        "name": "បាល់បោះ",
+        "categories": [
+          "៥ ទល់ ៥ បុរស",
+          "៥ ទល់ ៥ នារី",
+          "៣ ទល់ ៣ បុរស",
+          "៣ ទល់ ៣ នារី"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "taekwondo",
+        "name": "តេក្វាន់ដូ",
+        "categories": [
+          "Kyorugi −54 គីឡូក្រាម",
+          "Kyorugi −58 គីឡូក្រាម",
+          "Kyorugi −63 គីឡូក្រាម",
+          "Kyorugi −68 គីឡូក្រាម",
+          "Kyorugi −80 គីឡូក្រាម",
+          "Kyorugi +80 គីឡូក្រាម",
+          "Poomsae បុរស",
+          "Poomsae នារី"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "karate",
+        "name": "ការ៉ាតេ",
+        "categories": [
+          "Kata បុរស",
+          "Kata នារី",
+          "Kumite −60 គីឡូក្រាម",
+          "Kumite −67 គីឡូក្រាម",
+          "Kumite −75 គីឡូក្រាម",
+          "Kumite +75 គីឡូក្រាម"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "wrestling",
+        "name": "ចំបាប់",
+        "categories": [
+          "ចំបាប់សេរី −57 គីឡូក្រាម",
+          "ចំបាប់សេរី −65 គីឡូក្រាម",
+          "ចំបាប់សេរី −74 គីឡូក្រាម",
+          "ចំបាប់ក្រិក-រ៉ូម៉ាំង −60 គីឡូក្រាម",
+          "ចំបាប់ក្រិក-រ៉ូម៉ាំង −77 គីឡូក្រាម"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "weightlifting",
+        "name": "លើកទម្ងន់",
+        "categories": [
+          "−55 គីឡូក្រាម",
+          "−61 គីឡូក្រាម",
+          "−67 គីឡូក្រាម",
+          "−73 គីឡូក្រាម",
+          "−81 គីឡូក្រាម",
+          "−89 គីឡូក្រាម",
+          "+89 គីឡូក្រាម"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "judo",
+        "name": "យូដូ",
+        "categories": [
+          "−60 គីឡូក្រាម",
+          "−66 គីឡូក្រាម",
+          "−73 គីឡូក្រាម",
+          "−81 គីឡូក្រាម",
+          "−90 គីឡូក្រាម",
+          "+90 គីឡូក្រាម"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "petanque",
+        "name": "ប៉េតង់",
+        "categories": ["ឯកត្តជន", "គូ", "បីនាក់"],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "cycling",
+        "name": "ជិះកង់",
+        "categories": ["ប្រណាំងលើផ្លូវ", "ប្រណាំងវាស់ពេល", "ជិះកង់ភ្នំ"],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "table-tennis",
+        "name": "វាយកូនបាល់លើតុ",
+        "categories": [
+          "ឯកត្តជន បុរស",
+          "ឯកត្តជន នារី",
+          "គូ បុរស",
+          "គូ នារី",
+          "គូ ចម្រុះ"
+        ],
+        "status": "upcoming"
+      },
+
+      {
+        "id": "kun-khmer",
+        "name": "គុនខ្មែរ",
+        "categories": [
+          "ទម្ងន់ −៥៤ គីឡូក្រាម",
+          "ទម្ងន់ −៥៧ គីឡូក្រាម",
+          "ទម្ងន់ −៦០ គីឡូក្រាម",
+          "ទម្ងន់ −៦៣.៥ គីឡូក្រាម",
+          "ទម្ងន់ −៦៧ គីឡូក្រាម",
+          "ទម្ងន់ −៧១ គីឡូក្រាម",
+          "ទម្ងន់ −៧៥ គីឡូក្រាម"
+        ],
+        "status": "upcoming"
+      }
     ]
   },
-
   {
     "id": "evt-2",
-    "name": "Regional Championships 2025",
+    "name": "ជើងឯកកីឡាតំបន់ ឆ្នាំ២០២៦",
     "startDate": "2025-11-10",
     "endDate": "2025-11-16",
     "status": "completed",
     "sports": [
-      { "id": "badminton", "name": "Badminton", "categories": ["Singles", "Doubles"], "status": "completed" },
-      { "id": "volleyball", "name": "Volleyball", "categories": ["Indoor", "Beach"], "status": "completed" },
-      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Poomsae", "Kyorugi"], "status": "completed" }
+      {
+        "id": "badminton",
+        "name": "ប៉ះសី",
+        "categories": ["ឯកត្តជន", "គូ"],
+        "status": "completed"
+      },
+      {
+        "id": "volleyball",
+        "name": "បាល់ទះ",
+        "categories": ["ក្នុងសាល", "ឆ្នេរខ្សាច់"],
+        "status": "completed"
+      },
+      {
+        "id": "taekwondo",
+        "name": "តេក្វាន់ដូ",
+        "categories": ["ពូមសេ", "គ្យូរូគី"],
+        "status": "completed"
+      }
     ]
   },
 
   {
     "id": "evt-3",
-    "name": "National Youth Games 2026",
+    "name": "កីឡាយុវជនជាតិ ឆ្នាំ២០២៦",
     "startDate": "2026-07-05",
     "endDate": "2026-07-12",
     "status": "upcoming",
     "sports": [
-      { "id": "athletics", "name": "Athletics", "categories": ["U16", "U18"], "status": "upcoming" },
-      { "id": "football", "name": "Football", "categories": ["U16", "U18"], "status": "upcoming" },
-      { "id": "swimming", "name": "Swimming", "categories": ["U16", "U18"], "status": "upcoming" },
-      { "id": "basketball", "name": "Basketball", "categories": ["3x3 U18", "5x5 U18"], "status": "upcoming" }
+      {
+        "id": "athletics",
+        "name": "អត្តពលកម្ម",
+        "categories": ["អាយុក្រោម ១៦ ឆ្នាំ", "អាយុក្រោម ១៨ ឆ្នាំ"],
+        "status": "upcoming"
+      },
+      {
+        "id": "football",
+        "name": "បាល់ទាត់",
+        "categories": ["អាយុក្រោម ១៦ ឆ្នាំ", "អាយុក្រោម ១៨ ឆ្នាំ"],
+        "status": "upcoming"
+      },
+      {
+        "id": "swimming",
+        "name": "ហែលទឹក",
+        "categories": ["អាយុក្រោម ១៦ ឆ្នាំ", "អាយុក្រោម ១៨ ឆ្នាំ"],
+        "status": "upcoming"
+      },
+      {
+        "id": "basketball",
+        "name": "បាល់បោះ",
+        "categories": ["៣ ទល់ ៣ អាយុក្រោម ១៨ ឆ្នាំ", "៥ ទល់ ៥ អាយុក្រោម ១៨ ឆ្នាំ"],
+        "status": "upcoming"
+      }
     ]
   },
 
   {
     "id": "evt-4",
-    "name": "National University Games 2026",
+    "name": "កីឡាសាកលវិទ្យាល័យជាតិ ឆ្នាំ២០២៦",
     "startDate": "2026-09-01",
     "endDate": "2026-09-10",
     "status": "upcoming",
     "sports": [
-      { "id": "football", "name": "Football", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "volleyball", "name": "Volleyball", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "basketball", "name": "Basketball", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "badminton", "name": "Badminton", "categories": ["Singles", "Doubles"], "status": "upcoming" }
+      {
+        "id": "football",
+        "name": "បាល់ទាត់",
+        "categories": ["បុរស", "នារី"],
+        "status": "upcoming"
+      },
+      {
+        "id": "volleyball",
+        "name": "បាល់ទះ",
+        "categories": ["បុរស", "នារី"],
+        "status": "upcoming"
+      },
+      {
+        "id": "basketball",
+        "name": "បាល់បោះ",
+        "categories": ["បុរស", "នារី"],
+        "status": "upcoming"
+      },
+      {
+        "id": "badminton",
+        "name": "ប៉ះសី",
+        "categories": ["ឯកត្តជន", "គូ"],
+        "status": "upcoming"
+      }
     ]
   },
 
   {
     "id": "evt-5",
-    "name": "Cambodia National Combat Sports Championship 2026",
+    "name": "ជើងឯកកីឡាប្រយុទ្ធជាតិកម្ពុជា ឆ្នាំ២០២៦",
     "startDate": "2026-11-15",
     "endDate": "2026-11-22",
     "status": "upcoming",
     "sports": [
-      { "id": "boxing", "name": "Boxing", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "kun-khmer", "name": "Kun Khmer", "categories": ["Men", "Women"], "status": "upcoming" },
-      { "id": "taekwondo", "name": "Taekwondo", "categories": ["Kyorugi", "Poomsae"], "status": "upcoming" },
-      { "id": "karate", "name": "Karate", "categories": ["Kata", "Kumite"], "status": "upcoming" }
+      {
+        "id": "boxing",
+        "name": "ប្រដាល់សកល",
+        "categories": ["បុរស", "នារី"],
+        "status": "upcoming"
+      },
+      {
+        "id": "kun-khmer",
+        "name": "គុនខ្មែរ",
+        "categories": ["បុរស", "នារី"],
+        "status": "upcoming"
+      },
+      {
+        "id": "taekwondo",
+        "name": "តេក្វាន់ដូ",
+        "categories": ["គ្យូរូគី", "ពូមសេ"],
+        "status": "upcoming"
+      },
+      {
+        "id": "karate",
+        "name": "ការ៉ាតេ",
+        "categories": ["កាតា", "គូមីតេ"],
+        "status": "upcoming"
+      }
     ]
   }
 ]
