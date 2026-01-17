@@ -1,3 +1,3 @@
 export { RegistrationForm } from "./RegistrationForm"
 export { PhotoUpload } from "./PhotoUpload"
-export { FieldLabel, FormRow } from "./FormField"
+// export { FieldLabel, FormRow } from "./"

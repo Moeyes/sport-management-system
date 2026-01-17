@@ -12,7 +12,7 @@ import dashboardMetaData from '../mock/dashboard-meta.json';
 // Type-safe data exports
 export const provinces: Province[] = provincesData as Province[];
 export const sports: Sport[] = sportsData as Sport[];
-export const athletes: Athlete[] = athletesData as Athlete[];
+// export const athletes: Athlete[] = athletesData as Athlete[];
 // Normalize medal mock data to match the `Medal` type (ensure `event` exists)
 export const medals: Medal[] = (medalsData as any[]).map((m) => ({
   id: m.id,
@@ -55,9 +55,9 @@ export function getAthleteById(id: string): Athlete | undefined {
   return athletes.find(a => a.id === id);
 }
 
-export function getAthletesByProvince(province: string): Athlete[] {
-  return athletes.filter(a => a.province === province);
-}
+// export function getAthletesByProvince(province: string): Athlete[] {
+//   return athletes.filter(a => a.province === province);
+// }
 
 export function getMedalsByAthlete(athleteId: string): Medal[] {
   return medals.filter(m => m.athleteId === athleteId);
