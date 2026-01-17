@@ -2,7 +2,7 @@
 export type ParticipationGender = 'Male' | 'Female' 
 export type ParticipationNationality = 'IDCard' | 'BirthCertificate'
 export type ParticipationPosition = 'Athlete' | 'Leader' | 'Technical'
-export type ParticipationOrganization = 'Province' | 'Ministry'
+export type ParticipationOrganization = 'province' | 'ministry' | string
 
 export interface PositionInfo {
   role: ParticipationPosition;
@@ -13,7 +13,12 @@ export interface PositionInfo {
 }
 
 export interface OrganizationInfo {
+  // Unified organization info (supports provinces and ministries)
   type: ParticipationOrganization;
+  // id and name reference the unified organizations dataset
+  id?: string;
+  name?: string;
+  // legacy fields kept for compatibility
   province?: string;
   department?: string;
 }

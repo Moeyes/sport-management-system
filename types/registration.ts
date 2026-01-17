@@ -23,9 +23,24 @@ export interface FormData {
   position?: PositionInfo | null;
   organization?: OrganizationInfo | null;
 
+  // selected sport category (e.g., "Men", "Women", etc.)
+  category?: string;
+  // normalized id for the primary sport (slug)
+  sportId?: string;
+  // canonical sport category name (stored on server as `sportCategory`)
+  sportCategory?: string;
+
   sport: string;
   sports: string[];
   eventId?: string | null;
+
+  // Team fields (for team registrations)
+  registrationType?: 'individual' | 'team';
+  teamId?: string | null;
+  teamName?: string | null;
+  teamMembers?: import('./team').TeamMember[];
+  isTeamLeader?: boolean;
+
 
 }
 
@@ -48,6 +63,11 @@ export interface FormErrors {
   photoUpload?: string;
   sports?: string;
   organization?: string;
+
+  // Team-related errors
+  teamName?: string;
+  teamMembers?: string;
+  // member_{index} => per-member error string
 }
 
 export type OnFieldChange = <K extends keyof FormData>(

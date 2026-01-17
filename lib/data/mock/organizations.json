@@ -1,0 +1,119 @@
+[
+  { "id": "m-1", "type": "ministry", "name": "Ministry of Interior" },
+  { "id": "m-2", "type": "ministry", "name": "Ministry of National Defense" },
+  {
+    "id": "m-3",
+    "type": "ministry",
+    "name": "Ministry of Education, Youth and Sport"
+  },
+  {
+    "id": "1",
+    "type": "province",
+    "name": "Phnom Penh",
+    "khmerName": "ភ្នំពេញ"
+  },
+  { "id": "2", "type": "province", "name": "Kandal", "khmerName": "កណ្តាល" },
+  { "id": "3", "type": "province", "name": "Siem Reap", "khmerName": "សៀមរាប" },
+  {
+    "id": "4",
+    "type": "province",
+    "name": "Battambang",
+    "khmerName": "បាត់ដំបង"
+  },
+  {
+    "id": "5",
+    "type": "province",
+    "name": "Kampong Cham",
+    "khmerName": "កំពង់ចាម"
+  },
+  {
+    "id": "6",
+    "type": "province",
+    "name": "Kampong Speu",
+    "khmerName": "កំពង់ស្ពឺ"
+  },
+  {
+    "id": "7",
+    "type": "province",
+    "name": "Prey Veng",
+    "khmerName": "ព្រៃវែង"
+  },
+  { "id": "8", "type": "province", "name": "Takeo", "khmerName": "តាកែវ" },
+  {
+    "id": "9",
+    "type": "province",
+    "name": "Kampong Thom",
+    "khmerName": "កំពង់ធំ"
+  },
+  {
+    "id": "10",
+    "type": "province",
+    "name": "Banteay Meanchey",
+    "khmerName": "បន្ទាយមានជ័យ"
+  },
+  { "id": "11", "type": "province", "name": "Kampot", "khmerName": "កំពត" },
+  {
+    "id": "12",
+    "type": "province",
+    "name": "Sihanoukville",
+    "khmerName": "ព្រះសីហនុ"
+  },
+  {
+    "id": "13",
+    "type": "province",
+    "name": "Svay Rieng",
+    "khmerName": "ស្វាយរៀង"
+  },
+  {
+    "id": "14",
+    "type": "province",
+    "name": "Kampong Chhnang",
+    "khmerName": "កម្ពង់ឆ្នាំង"
+  },
+  {
+    "id": "15",
+    "type": "province",
+    "name": "Pursat",
+    "khmerName": "ពោធិ៍សាត់"
+  },
+  { "id": "16", "type": "province", "name": "Kep", "khmerName": "កែប" },
+  { "id": "17", "type": "province", "name": "Koh Kong", "khmerName": "កោះកុង" },
+  { "id": "18", "type": "province", "name": "Kratie", "khmerName": "ក្រចេះ" },
+  {
+    "id": "19",
+    "type": "province",
+    "name": "Oddar Meanchey",
+    "khmerName": "ឧត្តរមានជ័យ"
+  },
+  {
+    "id": "20",
+    "type": "province",
+    "name": "Preah Vihear",
+    "khmerName": "ព្រះវិហារ"
+  },
+  {
+    "id": "21",
+    "type": "province",
+    "name": "Stung Treng",
+    "khmerName": "ស្ទឹងត្រែង"
+  },
+  {
+    "id": "22",
+    "type": "province",
+    "name": "Ratanakiri",
+    "khmerName": "រតនគិរី"
+  },
+  {
+    "id": "23",
+    "type": "province",
+    "name": "Mondulkiri",
+    "khmerName": "មណ្ឌលគិរី"
+  },
+  { "id": "24", "type": "province", "name": "Pailin", "khmerName": "ប៉ៃលិន" },
+  {
+    "id": "25",
+    "type": "province",
+    "name": "Tboung Khmum",
+    "khmerName": "ត្បូងឃ្មុំ"
+  }
+]

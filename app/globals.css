@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Siemreap&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Siemreap&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Khmer:wght@100..900&family=Siemreap&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -76,26 +77,24 @@
 }
 
 @font-face {
-  font-family: 'Khmer OS Siemreab';
-  src: url('/fonts/KhmerOSSiemreab-Regular.woff2') format('woff2'),
-       url('/fonts/KhmerOSSiemreab-Regular.woff') format('woff');
+  font-family: 'Noto Sans Khmer';
+  src: url('/fonts/NotoSansKhmer-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Khmer OS Siemreab';
-  src: url('/fonts/KhmerOSSiemreab-Bold.woff2') format('woff2'),
-       url('/fonts/KhmerOSSiemreab-Bold.woff') format('woff');
+  font-family: 'Noto Sans Khmer';
+  src: url('/fonts/NotoSansKhmer-Bold.woff2') format('woff2');
   font-weight: 700;
-  font-style: bold;
+  font-style: normal;
   font-display: swap;
 }
 
 @theme inline {
-  --font-sans: 'Siemreap', 'Khmer OS Siemreab', 'Battambang', "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: 'Inter', 'Noto Sans Khmer', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-mono: "Geist Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -134,6 +133,20 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Design system additions: card shadow variable and responsive grid utility */
+:root {
+  --card-shadow: 0 6px 20px rgba(15,23,42,0.06);
+}
+
+@layer components {
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -146,3 +159,14 @@
     font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   }
 }
+
+/* small utility to show a subtle 'view details' overlay on card hover */
+@layer components {
+  .card-detail-overlay {
+    @apply pointer-events-none absolute right-4 bottom-4 opacity-0 translate-y-1 transition-all duration-200 rounded-full bg-white/90 px-3 py-1 shadow-sm hidden sm:flex items-center gap-2 text-sm text-slate-700;
+  }
+  .group:hover > .card-detail-overlay {
+    @apply opacity-100 translate-y-0;
+  }
+}
+

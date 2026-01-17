@@ -1,17 +1,21 @@
 import * as React from 'react'
+import { ChevronRight } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-function Card({ className, ...props }: React.ComponentProps<'div'>) {
+function Card({ className, children, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card"
       className={cn(
-        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm',
+        'group relative bg-white dark:bg-card text-card-foreground flex flex-col gap-6 rounded-2xl border-none py-6 shadow-[var(--card-shadow)] transition-transform duration-200 ease-out hover:-translate-y-1',
         className,
       )}
       {...props}
-    />
+    >
+      {children}
+
+    </div>
   )
 }
 

@@ -6,6 +6,7 @@ import { validateForm } from "@/lib/validation/validators";
 export function useRegistrationForm(initial?: Partial<RegistrationFormData>) {
   const [formData, setFormData] = useState<Partial<RegistrationFormData>>({
     sport: "",
+    category: "",
     position: undefined,
     organization: undefined,
     phone: "",
@@ -20,7 +21,7 @@ export function useRegistrationForm(initial?: Partial<RegistrationFormData>) {
   }, []);
 
   const reset = useCallback(() => {
-    setFormData({ sport: "", position: undefined, organization: undefined, phone: "", sports: [] });
+    setFormData({ sport: "", category: "", position: undefined, organization: undefined, phone: "", sports: [] });
     setErrors({});
   }, []);
 
