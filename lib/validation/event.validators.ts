@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import { Event } from "../../types";
 // import { requireField } from "./common.validators";
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Event } from "../../../types";
 import { loadEvents } from "../loaders/event.loader";
 

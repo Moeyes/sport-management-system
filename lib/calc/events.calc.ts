@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import { Event } from "../../types";
 
 // export function totalEventDays(event: Event): number {

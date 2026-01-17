@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import { Event } from "../../types";
 // import { toCsv } from "./csv";
 

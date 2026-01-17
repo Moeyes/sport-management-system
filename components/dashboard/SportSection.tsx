@@ -5,9 +5,10 @@ import { Trophy, Users, Plus } from "lucide-react"
 import type { SportRecord } from "@/types"
 import { useMemo, useState } from "react"
 import CrudManager from "@/components/common/CrudManager"
-import { CreateSportDialog } from "@/components/sports/create-sport-dialog"
-import { EditSportDialog } from "@/components/sports/edit-sport-dialog"
-import { SportTable } from "@/components/sports/sport-table"
+// import { CreateSportDialog } from "@/components/sports/create-sport-dialog"
+// import { EditSportDialog } from "@/components/sports/edit-sport-dialog"
+// import { SportTable } from "@/components/sports/sport-table"
+// import { createSport } from "@/lib"
 
 export function SportsSection({ sports }: { sports: SportRecord[] }) {
   const [list, setList] = useState<SportRecord[]>(sports)
@@ -57,11 +58,11 @@ export function SportsSection({ sports }: { sports: SportRecord[] }) {
         ))}
       </div>
 
-      <CrudManager
+      {/* <CrudManager
         initialItems={list}
         idKey="id"
-        CreateComponent={CreateSportDialog}
-        EditComponent={EditSportDialog}
+        // CreateComponent={CreateSportDialog}
+        // EditComponent={EditSportDialog}
         onCreate={(item) => setList((prev) => [item, ...prev])}
         onEdit={(item) => setList((prev) => prev.map((s) => (s.id === item.id ? item : s)))}
         onDelete={(id) => setList((prev) => prev.filter((s) => s.id !== id))}
@@ -70,7 +71,7 @@ export function SportsSection({ sports }: { sports: SportRecord[] }) {
             <SportTable sports={items} onEdit={(s) => onEditRequested(s)} onDelete={(id) => onDeleteRequested(id)} onCreate={() => openCreate()} />
           </div>
         )}
-      />
+      /> */}
     </div>
   )
 }

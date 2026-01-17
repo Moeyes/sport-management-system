@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import { Athlete } from "../../types";
 // import { groupBy } from "./groupBy";
 

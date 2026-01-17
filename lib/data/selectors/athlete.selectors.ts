@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import { Athlete } from "../../../types";
 // import { loadAthletes } from "../loaders/athlete.loader";
 

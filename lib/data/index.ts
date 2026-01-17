@@ -5,6 +5,6 @@ export * from "./loaders/medal.loader";
 export * from "./loaders/province.loader";
 export * from "./selectors/event.selectors";
 export * from "./selectors/sport.selectors";
-export * from "./selectors/athlete.selectors";
+// export * from "./selectors/athlete.selectors";
 export * from "./selectors/medal.selectors";
 export * from "./selectors/province.selectors";

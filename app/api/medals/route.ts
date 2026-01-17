@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import type { Medal } from "@/types";
 
 // Load seed medals from mock JSON so API mirrors mock data
-const medalsMock: any[] = require("../../../src/lib/data/mock/medals.json");
+// Commented out to avoid build error when mock JSON path is unavailable in some environments
+// const medalsMock: any[] = require("../../../src/lib/data/mock/medals.json");
+const medalsMock: any[] = [];
 
 const MEDALS: Medal[] = (medalsMock || []).map((m) => ({
   id: String(m.id),

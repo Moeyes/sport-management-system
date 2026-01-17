@@ -1,6 +1,6 @@
 "use client"
 
-import React, { type ReactNode } from "react"
+import { type ReactNode } from "react"
 
 export default function PublicLayout({ children }: { children: ReactNode }) {
 	return (

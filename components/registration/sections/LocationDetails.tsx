@@ -143,8 +143,8 @@ export function LocationDetails({
             : []),
         ]}
       />
-      {(errors?.province || (errors as any).organization) && (
-        <p className="text-sm text-red-600 mt-1">{errors?.province ?? (errors as any).organization}</p>
+      {(errors?.province || (errors as any)?.organization) && (
+        <p className="text-sm text-red-600 mt-1">{errors?.province ?? (errors as any)?.organization}</p>
       )}
       <Button
         className="w-full h-12 rounded-full"

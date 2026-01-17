@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import { notFound } from "next/navigation"
 // import { loadEventById } from "@/lib/data/loaders/event.loader"
 // import { athletes as athletesMock, medals as medalsMock } from "@/lib/data/loaders/dataLoader"
